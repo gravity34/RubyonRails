@@ -1,0 +1,11 @@
+rails new myblog
+cd myblog
+rails generate scaffold User name:string email:string
+rails g scaffold kitap isim sayfa:integer yazar
+rails generate scaffold User name:string email:string
+rake db:migrate
+rails db:migrate
+rails s     
+ root "kitaps#index"
+  root "users#index"
+   root 'application#hello'     controller#action
