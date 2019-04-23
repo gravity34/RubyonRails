@@ -1,0 +1,36 @@
+First of all open a new terminal 
+cd kutuphane      # be careful you shuold be inside the folder and then write rails c
+rails c   
+
+
+
+
+Create
+1)
+Kitap.create(isim:"c sharp",sayfa:123, yazar:"sefer algan")
+
+2)
+k=Kitap.new
+k.isim="Rails programming"
+k.sayfa=100
+k.yazar="OReily"
+k.save
+
+Read
+Kitap.all       #Tüm kayıtlar
+Kitap.find(1)   #id'si 1 olan kayıt
+Kitap.count     #Toplam kayıt sayısı
+Kitap.first     #İlk kayıt
+Kitap.last      #Son kayıt
+Kitap.find_by(isim:"Java")  #Kitap ismi "Java" olan kayıtlar
+
+
+Update
+k=Kitap.first
+k.yazar="Muharrem Taç"
+k.sayfa=121
+k.save
+
+Delete
+k=Kitap.first
+k.destroy
