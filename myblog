@@ -9,3 +9,47 @@ rails s
  root "kitaps#index"
   root "users#index"
    root 'application#hello'     controller#action
+rails generate controller demo index       #  create a controller with name demo and index is the method which render a view and calls an action
+There are four types of routes simple default root route and resourceful rout
+simple rout ---- get 'demo/index'
+default rout ---   get ':controller(/:action(/:id))'    ------ demo=> controller , index=> action
+root'demo#index'
+when we want to use ruby code embedded with html we use .erb extension
+Instance variables
+<% 1+1 %> will not generate any output only process will happen
+<%= 1+1 %> will print output
+<% var= ' world'%>
+<%= "hello #{var} "%>
+
+Inside democontroller
+
+ def hello
+    @array=[1,2,3,4,5,6,7,8,9]  @ instance variable
+    render('hello')
+  end
+  
+ # Inside hello.html.erb
+  
+  <h1>Hello world form hello file</h1>
+<%= 5+5 %>
+
+<% var = "csgeeks" %>
+<%= "hello #{var}" %>
+
+<% @array.each do |n| %>
+<%= n %> <br/>
+<% end %>
+
+
+#ınside index.html.erb
+#linking pages
+<h1>Hello world 112</h1>
+<a href = "/demo/hello">Hello page1</a><br/>
+<%= link_to('hello page 2', {:action => 'hello'}) %> 
+
+
+
+
+
+
+
